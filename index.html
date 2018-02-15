@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Testing</title>
+</head>
+<body>
+<style>
+body {
+	background-color: #1b1b1c;
+	color: white;
+	text-align: center;
+	width: 70%;
+	margin-left: 15%;
+}
+</style>
+</body>
+<script type="text/javascript">
+let number_of_people = 3;
+
+let url = [];
+url.push("actors.xml");
+url.push("scenarios.xml");
+
+function ready(urls, callback) {
+	let xmlHttp = [];
+	let xmlvar = [];
+
+	for (let i = 0; i < urls.length; i++) {
+		xmlHttp[i] = new XMLHttpRequest();
+    
+    	xmlHttp[i].onreadystatechange = () => { 
+	        if (xmlHttp[i].readyState == 4 && xmlHttp[i].status == 200) {
+		        xmlvar.push(xmlHttp[i].responseXML);
+		        
+		        if (i == urls.length - 1) 
+			        callback(xmlvar);
+        	}
+    }
+    
+    xmlHttp[i].open("GET", urls[i], true);
+    xmlHttp[i].send(null);
+	}
+}	
+
+ready(url, (xmlFile) => {	
+	let actors = xmlFile[0].getElementsByTagName("actors")[0].children;
+	let scenarios = xmlFile[1].getElementsByTagName("scenarios")[0].children;
+	
+	let actor = [];
+	for (let i = 0; i < number_of_people; i++) {
+		actor[i] = getRandom(actors, "name");
+
+		for (let j = 0; j <= i; j++) {
+			while (actor[i] == actor[j] && i != j) {
+				actor[i] = getRandom(actors, "name");
+			}
+		}
+	}
+
+	let scenarioAll = getRandomAll(scenarios);
+
+	while (scenarioAll.getElementsByTagName("quantity")[0].innerHTML != number_of_people) {
+		scenarioAll = getRandomAll(scenarios);
+	}
+
+	let scenario = scenarioAll.getElementsByTagName("text")[0].innerHTML;
+
+	for (let i = 0; i < number_of_people; i++) {
+		let replace = "actor" + i;
+		let re = new RegExp(replace, "g");
+
+		scenario = scenario.replace(re, actor[i]);	
+	}
+
+	document.getElementsByTagName("body")[0].innerHTML += "<h3>" + scenario + "</h3>";
+});
+
+function getRandomAll(list) {
+		let list_length = list.length;
+	let random = Math.floor(Math.random() * list_length);
+
+	return list[random];
+}
+
+function getRandom(list, attribute) {
+	let list_length = list.length;
+	let random = Math.floor(Math.random() * list_length);
+
+	return list[random].getElementsByTagName(attribute)[0].innerHTML;
+}
+</script>
+</html>

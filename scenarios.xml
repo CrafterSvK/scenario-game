@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenarios>
+	<scenario>
+		<name>Beach struggle</name>
+		<type>Political</type>
+		<text>Wild sea animal appeared on the beach and it's dieing slowly and painfully actor0, actor1 and actor2 needs to save it but the sea animal is protected by freaking US government.</text>
+		<quantity>3</quantity>
+	</scenario>
+	<scenario>
+		<name>Beach struggle 2</name>
+		<type>Political</type>
+		<text>You are having fun on a beach and some swole guys tuned your radio to hardbass. actor0 and actor1 need to deal with them politicaly.</text>
+		<quantity>2</quantity>
+	</scenario>
+	<scenario>
+		<name>Selenas Hair</name>
+		<type>Political</type>
+		<text>Selena Gomez is changing a hairstyle. actor0 and actor1 should convince her of otherwise.</text>
+		<quantity>2</quantity>
+	</scenario>
+	<scenario>
+		<name>Struggle</name>
+		<type>Political</type>
+		<text>You are having fun. But suddenly wild actor0 appears. actor0 is pretty aggressive. Because actor1 and actor2 are liberal pacifists. They are trying to calm him down diplomatically.</text>
+		<quantity>3</quantity>
+	</scenario>
+	<scenario>
+		<name>Biting adventure</name>
+		<type>Adventure</type>
+		<text>actor0 got bit by actor1, somehow he managed to get his features. They noticed it and wanted to use it in their own advantage. So they get actor2 and try to rob a bank.</text>
+		<quantity>3</quantity>
+	</scenario>
+	<scenario>
+		<name>Cold War 2</name>
+		<type>Political</type>
+		<text>actor0 somehow managed to become Emperor of the Soviet Russia. They also elected actor1 as American president. actor2 started conflict between them and a war begun. What will they do?</text>
+		<quantity>3</quantity>
+	</scenario>
+	<scenario>
+		<name>Microvawe oven</name>
+		<type>Adventure</type>
+		<text>Microwave oven of actor0 happens to be broken suddenly. actor0 isn't a dummy. So he tries to repair it by himself. After long struggle he broke it even more so he calls actor1 and actor2 for help. How will they fix it?</text>
+		<quantity>3</quantity>
+	</scenario>
+	<scenario>
+		<name>gtfo</name>
+		<type>Adventure</type>
+		<text>actor0 and actor1 suddenly meet a wizard. He grands them 3 wishes. actor0 will wish ..... and actor1 will wish ..... . They have one wish left and both of them want the wish for themselves, so they fight.</text>
+		<quantity>2</quantity>
+	</scenario>
+</scenarios>

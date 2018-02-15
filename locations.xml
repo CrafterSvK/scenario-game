@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locations>
+	<location>
+		<name>Desert</name>
+	</location>
+	<location>
+		<name>Plains</name>
+	</location>
+</locations>
